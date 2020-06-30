@@ -14,8 +14,8 @@ class FullPageHumanAnatomy extends StatelessWidget {
   final String route;
 
   FullPageHumanAnatomy(
-      {Key key, this.mapData, this.container, this.title, this.route})
-      : super(key: key);
+      {Key key, this.mapData, this.container, this.title, this.route}
+  );
 
   @override
   Widget build(BuildContext context) {
