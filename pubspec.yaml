@@ -33,6 +33,8 @@ flutter:
     - assets/mouth.svg
     - assets/neck.svg
     - assets/chest.svg
+    - assets/chest_left.svg
+    - assets/chest_right.svg
     - assets/abdomin.svg
     - assets/pelvis.svg
     - assets/publs.svg
