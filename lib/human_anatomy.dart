@@ -35,11 +35,11 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
         child: Stack(
           children: <Widget>[
             bodyPart("assets/head.svg", "Head", 0.0, 0.0, 0.0, 70.0),
-            bodyPart("assets/left_ear.svg", "leftEar", 32.0, 50.0, 0.0, 20.0),
-            bodyPart("assets/right_ear.svg", "rightEar", 32.0, 0.0, 50.0, 20.0),
-            bodyPart("assets/left_eye.svg", "LeftEye", 22.0, 20.0, 0.0, 10.0),
-            bodyPart("assets/right_eye.svg", "rightEye", 22.0, 0.0, 20.0, 10.0),
-            bodyPart("assets/nose.svg", "Nose", 25.0, 0.0, 0.0, 20.0),
+            // bodyPart("assets/left_ear.svg", "leftEar", 32.0, 50.0, 0.0, 20.0),
+            // bodyPart("assets/right_ear.svg", "rightEar", 32.0, 0.0, 50.0, 20.0),
+            // bodyPart("assets/left_eye.svg", "LeftEye", 22.0, 20.0, 0.0, 10.0),
+            // bodyPart("assets/right_eye.svg", "rightEye", 22.0, 0.0, 20.0, 10.0),
+            // bodyPart("assets/nose.svg", "Nose", 25.0, 0.0, 0.0, 20.0),
             // bodyPart("assets/mouth.svg", "Mouth", 48.0, 0.0, 0.0, 10.0),
             bodyPart("assets/neck.svg", "Neck", 58.0, 0.0, 0.0, 40.0),
 
