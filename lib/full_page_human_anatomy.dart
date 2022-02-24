@@ -1,34 +1,38 @@
 library human_anatomy;
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:human_anatomy/utils.dart';
 
 import 'human_anatomy.dart';
 
-class FullPageHumanAnatomy extends StatelessWidget {
-  var _finalBodyPartList = [];
+class FullPageHumanAnatomy extends StatefulWidget {
   final Map mapData;
   final Widget container;
   final String title;
   final String route;
 
   FullPageHumanAnatomy(
-      {Key key, this.mapData, this.container, this.title, this.route}
-  );
+      {Key key, this.mapData, this.container, this.title, this.route});
+
+  @override
+  State<FullPageHumanAnatomy> createState() => _FullPageHumanAnatomyState();
+}
+
+class _FullPageHumanAnatomyState extends State<FullPageHumanAnatomy> {
+  var _finalBodyPartList = [];
 
   @override
   Widget build(BuildContext context) {
-    print(mapData);
+    print(widget.mapData);
     return Scaffold(
       body: Container(
         child: Stack(
           children: <Widget>[
-            container != null ? container : Container(),
+            widget.container != null ? widget.container : Container(),
             TopTitle(
               topMargin: 80.0,
               leftMargin: 50.0,
-              title: title,
+              title: widget.title,
             ),
             Container(
               alignment: Alignment.center,
@@ -44,12 +48,13 @@ class FullPageHumanAnatomy extends StatelessWidget {
                 backgroundColor: Colors.black87,
                 child: Icon(Icons.arrow_forward),
                 onPressed: () {
-                  mapData['bodyPart'] = _finalBodyPartList.toString();
+                  widget.mapData['bodyPart'] = _finalBodyPartList.toString();
 
                   _finalBodyPartList.length == 0
                       ? Utils().showMyDialog(
                           context, "Please Select Affected Body Part")
-                      : Navigator.pushNamed(context, route, arguments: mapData);
+                      : Navigator.pushNamed(context, widget.route,
+                          arguments: widget.mapData);
                 },
               ),
             ),

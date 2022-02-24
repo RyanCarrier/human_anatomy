@@ -1,7 +1,6 @@
 name: human_anatomy
 description: A new Flutter package for Human Anatomy.
 version: 0.0.1
-author:
 homepage:
 
 environment:
@@ -10,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^0.18.0
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:

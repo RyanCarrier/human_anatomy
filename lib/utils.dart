@@ -6,19 +6,20 @@ class Utils {
     // flutter defined function
 
     showDialog(
-        context: context,
-        // return object of type AlertDialog
-        child: new CupertinoAlertDialog(
-          title: new Text("Massage"),
-          content: new Text(text),
-          actions: <Widget>[
-            new FlatButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: new Text("OK"))
-          ],
-        ));
+      context: context,
+      // return object of type AlertDialog
+      builder: (context) => CupertinoAlertDialog(
+        title: new Text("Massage"),
+        content: new Text(text),
+        actions: <Widget>[
+          new TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: new Text("OK"))
+        ],
+      ),
+    );
   }
 }
 
@@ -42,7 +43,7 @@ class MyBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.bottomLeft,
-      child: FlatButton.icon(
+      child: TextButton.icon(
           onPressed: () {
             Navigator.of(context).pop();
           },
