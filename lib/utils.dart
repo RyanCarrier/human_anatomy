@@ -24,16 +24,16 @@ class Utils {
 }
 
 class TopPrograssBar extends StatelessWidget {
-  final String progressBarImagePath;
+  final String? progressBarImagePath;
 
-  TopPrograssBar({Key key, this.progressBarImagePath}) : super(key: key);
+  TopPrograssBar({Key? key, this.progressBarImagePath}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 35.0),
       alignment: Alignment.topCenter,
       height: 25,
-      child: Image.asset(progressBarImagePath, fit: BoxFit.fill),
+      child: Image.asset(progressBarImagePath!, fit: BoxFit.fill),
     );
   }
 }
@@ -54,22 +54,22 @@ class MyBackButton extends StatelessWidget {
 }
 
 class TopTitle extends StatelessWidget {
-  final double topMargin;
-  final double leftMargin;
-  final String title;
+  final double? topMargin;
+  final double? leftMargin;
+  final String? title;
 
-  const TopTitle({Key key, this.topMargin, this.leftMargin, this.title})
+  const TopTitle({Key? key, this.topMargin, this.leftMargin, this.title})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topLeft,
       margin: EdgeInsets.only(
-        top: topMargin,
-        left: leftMargin,
+        top: topMargin!,
+        left: leftMargin!,
       ),
       child: Text(
-        title,
+        title!,
         style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
       ),
     );
@@ -77,10 +77,10 @@ class TopTitle extends StatelessWidget {
 }
 
 class SendButton extends StatelessWidget {
-  final Function sendAction;
-  final Icon buttonIcon;
+  final Function? sendAction;
+  final Icon? buttonIcon;
 
-  SendButton({Key key, this.sendAction, this.buttonIcon}) : super(key: key);
+  SendButton({Key? key, this.sendAction, this.buttonIcon}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

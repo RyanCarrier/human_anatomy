@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HumanAnatomy extends StatefulWidget {
-  final ValueChanged<List> onChanged;
+  final ValueChanged<List>? onChanged;
 
-  const HumanAnatomy({Key key, this.onChanged}) : super(key: key);
+  const HumanAnatomy({Key? key, this.onChanged}) : super(key: key);
   @override
   _HumanAnatomyState createState() => new _HumanAnatomyState();
 }
@@ -92,7 +92,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
 
   Widget bodyPart(String svgPath, String svgName, double marginTop,
       double marginRight, double marginLeft, double height) {
-    Color _svgColor = _bodyPartList.contains(svgName) ? Colors.redAccent : null;
+    Color? _svgColor = _bodyPartList.contains(svgName) ? Colors.redAccent : null;
     final Widget bodyPartSvg = new SvgPicture.asset(svgPath,
         semanticsLabel: svgName, color: _svgColor);
     return Container(
@@ -117,7 +117,7 @@ class _HumanAnatomyState extends State<HumanAnatomy> {
 
   void _publishSelection(List _bodyPartList) {
     if (widget.onChanged != null) {
-      widget.onChanged(_bodyPartList);
+      widget.onChanged!(_bodyPartList);
     }
   }
 }
